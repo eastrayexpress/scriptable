@@ -17,7 +17,7 @@ const weatherCal = {
       this.fm = iCloudInUse ? FileManager.iCloud() : FileManager.local()
       this.bgPath = this.fm.joinPath(this.fm.libraryDirectory(), "weather-cal-" + this.name)
       this.prefPath = this.fm.joinPath(this.fm.libraryDirectory(), "weather-cal-preferences-" + name)
-      this.widgetUrl = "https://raw.githubusercontent.com/mzeryck/Weather-Cal/main/weather-cal.js"
+      this.widgetUrl = "https://raw.githubusercontent.com/eastrayexpress/scriptable/main/lockscreen.js"
       this.now = new Date()
       this.data = {}
       this.initialized = true
@@ -1262,13 +1262,13 @@ const weatherCal = {
   
       const mainConditionStack = this.align(currentWeatherStack)
       const mainCondition = mainConditionStack.addImage(this.provideConditionSymbol(weatherData.currentCondition,this.isNight(this.now)))
-      mainCondition.imageSize = new Size(22,22) // TODO: Adjustable size
+      mainCondition.imageSize = new Size(30,30) // TODO: Adjustable size
       this.tintIcon(mainCondition, this.format.largeTemp)
       mainConditionStack.setPadding(weatherSettings.showLocation ? 0 : this.padding, this.padding, 0, this.padding)
       
       const tempText = this.displayNumber(weatherData.currentTemp,"--") + "°"
       if (weatherSettings.horizontalCondition) {
-        mainConditionStack.addSpacer(5)
+        mainConditionStack.addSpacer(0)
         mainConditionStack.layoutHorizontally()
         mainConditionStack.centerAlignContent()
         this.provideText(tempText, mainConditionStack, this.format.largeTemp)

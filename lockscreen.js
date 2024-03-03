@@ -1453,7 +1453,7 @@ const weatherCal = {
         // Set up the container for the condition.
         if (hourly) {
           const subCondition = conditionStack.addImage(this.provideConditionSymbol(weatherData.hourly[i].Condition, this.isNight(myDate)))
-          subCondition.imageSize = new Size(10,10)
+          subCondition.imageSize = new Size(18,18)
           this.tintIcon(subCondition, this.format.smallTemp)
           
           if (horizontal) { conditionStack.addSpacer() }

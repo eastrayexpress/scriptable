@@ -1466,7 +1466,7 @@ const weatherCal = {
           if (horizontal) { tempStack.addSpacer() }
           const temp = this.provideText(this.displayNumber(weatherData.hourly[i].Temp,"--") + "°", tempStack, this.format.smallTemp)
           temp.lineLimit = 1
-          temp.minimumScaleFactor = 0.75
+          //temp.minimumScaleFactor = 0.75
           if (horizontal) { 
             temp.size = stackSize
             tempStack.addSpacer() 
